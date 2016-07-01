@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+
+    <welcome-file-list>
+        <welcome-file>index</welcome-file>
+    </welcome-file-list>
+
+    <!--全局错误页面-->
+    <!--<error-page>-->
+    <!--<exception-type>java.lang.Exception</exception-type>-->
+    <!--<location>/error.jsp</location>-->
+    <!--</error-page>-->
+    <!--<error-page>-->
+    <!--<error-code>404</error-code>-->
+    <!--<location>/error.jsp</location>-->
+    <!--</error-page>-->
+
+
+    <!--AdminServlet   Start-->
+    <servlet>
+        <servlet-name>AdminArticleServlet</servlet-name>
+        <servlet-class>com.zhaojunlike.admin.ArticleServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminCategoryServlet</servlet-name>
+        <servlet-class>com.zhaojunlike.admin.CategoryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminNewsServlet</servlet-name>
+        <servlet-class>com.zhaojunlike.admin.NewsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminPublicServlet</servlet-name>
+        <servlet-class>com.zhaojunlike.admin.PublicServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminIndexServlet</servlet-name>
+        <servlet-class>com.zhaojunlike.admin.IndexServlet</servlet-class>
+    </servlet>
+
+
+    <!--HomeServlet  Start-->
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>com.zhaojunlike.home.HomeServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>IndexServlet</servlet-name>
+        <servlet-class>com.zhaojunlike.home.IndexServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>NewsServlet</servlet-name>
+        <servlet-class>com.zhaojunlike.home.NewsServlet</servlet-class>
+    </servlet>
+
+
+    <!--HomeServlet Mapping Start-->
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>IndexServlet</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewsServlet</servlet-name>
+        <url-pattern>/home/news</url-pattern>
+    </servlet-mapping>
+
+
+    <!--AdminServlet Mapping Start-->
+    <servlet-mapping>
+        <servlet-name>AdminNewsServlet</servlet-name>
+        <url-pattern>/admin/news</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AdminCategoryServlet</servlet-name>
+        <url-pattern>/admin/category</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AdminArticleServlet</servlet-name>
+        <url-pattern>/admin/article</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminPublicServlet</servlet-name>
+        <url-pattern>/admin/public</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminIndexServlet</servlet-name>
+        <url-pattern>/admin/index</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
